@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+main {
+  position: fixed; /* Додаємо позиціонування */
+  display: grid;
+  height: 85vh;
+  width: 100vw;
+  top: 90px; /* Тепер це буде працювати */
+  place-content: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url(IMG/background.png); /* Фонове зображення */
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+  position: fixed;
+  overflow: hidden;
+  background-color: black;
+  width: 100%;
+  height: 90px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+  overflow: hidden; /* Прибирає нижній слайдбар */
+}
+
+.StoriesBlock {
+  margin-top: 3.5px;
+  width: 100%;
+  display: flex; /* Змінюємо inline-flex на flex */
+  flex-wrap: nowrap; /* Елементи не переносяться на новий рядок */
+  overflow: hidden; /* Прибирає вихідні елементи */
+}
+
+.linked-element {
+  transition: 1s;
+}
+
+#userStories {
+  width: 80px;
+  height: 80px;
+  background-image: url(https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png);
+  background-size: contain;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: 3.5px solid;
+  border-color: white;
+  border-spacing: 1px;
+  display: inline-flex;
+  place-content: center;
+  margin-left: 15px;
+  transition: 1s;
+}
+
+#userStoriesChild {
+  width: 25px;
+  height: 25px;
+  background-image: url(IMG/plus.png);
+  background-size: contain;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  border-spacing: 1px;
+  display: inline-flex;
+  place-content: center;
+  margin-right: 50px;
+  z-index: 1000;
+  position: absolute;
+  margin-top: 50px;
+  left: 70px;
+  border: 3px solid white;
+}
+
+.linked-element:hover ~ .linked-element, /* Інший елемент після поточного */
+.linked-element:hover + .linked-element {
+  /* Безпосередньо наступний елемент */
+  scale: 1.2;
+}
+
+.linked-element:hover {
+  transform: scale(1.05);
+}
+
+#noneUser {
+  margin-top: 5px;
+  margin-left: 15px;
+  width: 70px;
+  height: 70px;
+  background-image: url(IMG/NoneUser.png); /* Шлях до зображення */
+  background-size: cover; /* Зображення повністю заповнює елемент */
+  background-position: center; /* Центруємо зображення */
+  background-repeat: no-repeat; /* Зображення не повторюється */
+  border-radius: 100%; /* Робимо круглим */
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  border: 3.5px solid white;
+  display: inline-flex;
+  place-content: center;
+  transform-origin: center;
+  will-change: transform;
+}
+
+#noneUser:hover {
+  transform: scale(1.05);
+}
+
+#noneUser::before {
+  content: '';
+  position: absolute;
+  top: -5px; /* Відступ для зовнішньої рамки */
+  left: -5px;
+  width: calc(100% + 10px); /* Додаємо відступи до ширини */
+  height: calc(100% + 10px); /* Додаємо відступи до висоти */
+  border: 3px solid rgba(255, 255, 255, 0.7); /* Внутрішня рамка */
+  border-radius: 50%; /* Робить внутрішню рамку круглою */
+  box-sizing: border-box; /* Забезпечує правильний підрахунок ширини */
+  z-index: -1; /* Щоб не перекривало елемент */
+}
+
+#menuButton {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+  transition: 1s;
+}
+
+#menuButton:hover {
+  transform: scale(1.05);
+}
+
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Початкове положення поза екраном */
+  width: 250px;
+  height: 300px;
+  transition: right 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  z-index: 1000; /* Забезпечує, що меню буде поверх усього іншого */
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+  gap: 15px;
+  overflow: hidden; /* Прибирає нижній слайдбар */
+  border-bottom-left-radius: 25px;
+}
+
+/* Додаємо тінь лише коли меню відкрито */
+#sideMenu.open {
+  right: 0;
+  box-shadow: -4px 0px 15px rgba(0, 0, 0, 0.5); /* Тінь зліва */
+}
+
+#sideMenu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sideMenu li {
+  margin: 35px;
+  transition: 1s;
+}
+
+#sideMenu li:hover {
+  transform: scale(1.05);
+}
+
+#sideMenu a {
+  color: white;
+  text-decoration: none;
+}
+
+#sideMenu.open {
+  right: 0; /* Висуває меню на екран */
+}
+
+.post {
+  align-self: center;
+  width: 600px;
+  height: 550px;
+  background-color: white;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#userNamePost {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  background-color: white;
+  border: solid white;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  text-align: center;
+  margin-top: 6%;
+  margin-left: 9%;
+  place-content: center;
+  position: absolute;
+  height: 45px; /* Increase the height */
+  width: 100px;
+}
+
+#postUserIcon {
+  position: relative;
+  top: 40%;
+  left: 3.5%;
+  margin-top: 20px;
+  width: 80px;
+  height: 80px;
+  background-image: url(https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png);
+  background-size: contain;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: 3.5px solid;
+  border-color: white;
+  border-spacing: 1px;
+  display: inline-flex;
+  place-content: center;
+  margin-left: 15px;
+  transition: 1s;
+}
+
+#userPostPhoto {
+  width: 50%;
+  place-self: center;
+  border-radius: 20px;
+}
+
+#userPostBlock {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+.useBar {
+  display: flex;
+  justify-content: space-between; /* Розподіл простору між елементами */
+  align-items: center; /* Вирівнювання по вертикалі */
+  margin: 10px 25%; /* Відступи для центрування */
+  gap: 10px; /* Проміжок між кнопками */
+  background-color: white;
+}
+
+.actionButtons {
+  display: flex; /* Вирівнювання кнопок у рядок */
+  justify-content: space-between; /* Рівномірний простір між кнопками */
+  align-items: center; /* Вирівнювання по вертикалі */
+  gap: 15px; /* Проміжок між кнопками */
+  position: fixed;
+  bottom: 20px; /* Відступ знизу */
+  left: 50%;
+  transform: translateX(-50%); /* Центрування контейнера по горизонталі */
+  z-index: 1000; /* Поверх інших елементів */
+}
+
+.actionButtons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.actionButtons button:hover {
+  scale: 1.1; /* Легка анімація */
+}
+
+.actionButtons img {
+  width: 40px; /* Розмір іконок */
+  height: 40px;
+  transition: 1s;
+}

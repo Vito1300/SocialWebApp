@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url(IMG/background.png); /* Фонове зображення */
+  background-size: cover;
+  background-position: center;
+}
+
+#userStories {
+  align-self: center;
+  width: 80px;
+  height: 80px;
+  background-image: url(https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png);
+  background-size: contain;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: 3.5px solid;
+  border-color: white;
+  border-spacing: 1px;
+  display: inline-flex;
+  place-content: center;
+  margin-left: 15px;
+  transition: 1s;
+}
+
+.linked-element:hover ~ .linked-element, /* Інший елемент після поточного */
+.linked-element:hover + .linked-element {
+  /* Безпосередньо наступний елемент */
+  scale: 1.2;
+}
+
+.linked-element:hover {
+  transform: scale(1.05);
+}
+
+.upperBlock {
+  display: flex;
+  width: 50%;
+  height: 100px;
+  background-color: rgb(33, 95, 165);
+  place-self: center;
+  border-radius: 0px 0px 20px 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}

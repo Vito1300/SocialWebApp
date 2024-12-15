@@ -1,0 +1,129 @@
+body {
+    margin: 0; /* Відсутність зовнішніх відступів у body */
+    height: 100vh; /* Висота тіла сторінки дорівнює висоті вікна браузера */
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    background-image: url(IMG/background.png);
+    background-size: 100vw 100vh; /* Add this line */
+    background-repeat: no-repeat; /* Add this line to prevent repeating */
+    backdrop-filter: blur(25px);
+  }
+
+.logo {
+    transition: 1s;
+    transform: scale(1.0);
+}
+
+.row {
+    margin-top: 5%;
+    transform: scale(1.2);
+    gap: 25px;
+}
+
+#Mail {
+    text-indent: 30px;
+    height: 20px;
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.25);
+    background: linear-gradient(135deg, hsla(0, 0%, 79%, 0.503), rgba(118, 118, 118, 0));
+    transition: 1s;
+}
+
+#Mail:hover {
+    transform: scale(1.1);
+}
+
+#Mail::placeholder {
+font-size: 10px;
+color: black;
+text-indent: 20px;
+opacity: 75%;
+}
+
+#Mail:focus {
+outline: none;
+border-color: white;
+}
+
+#Mail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#passwordSubmit{
+    text-indent: 30px;
+    height: 20px;
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.25);
+    background: linear-gradient(135deg, hsla(0, 0%, 79%, 0.503), rgba(118, 118, 118, 0));
+    transition: 1s;
+}
+
+#passwordSubmit::placeholder {
+    font-size: 10px;
+    padding-left: 3%;
+    color: black;
+    text-indent: 20px;
+    opacity: 75%;
+    }
+
+#passwordSubmit:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+    
+#passwordSubmit:focus {
+    outline: none;
+    border-color: white;
+    }
+
+#submitForm {
+    cursor: pointer;
+    background-color: #0095F6;
+    height: 25px;
+    width: 200px;
+    margin-left: 21.5%;
+    color: white;
+    font-size: smaller;
+    font-weight: bold;
+    background: linear-gradient(135deg, rgb(65, 87, 255), rgba(78, 175, 227, 0.91));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 0px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: 1s;
+}
+      
+#submitForm:hover {
+    background-color: #3d91ff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+.row {
+    animation: 2s show ease;
+  }
+  
+  @keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+.underText {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin-top: 23%;
+    margin-left: -100%;
+    margin-right: -100%;
+    font-size: small;
+}
+
+#textRegister {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.underText {
+    animation: 2s show ease;
+}

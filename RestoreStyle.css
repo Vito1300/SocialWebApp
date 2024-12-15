@@ -1,0 +1,213 @@
+body {
+    margin: 0; /* Відсутність зовнішніх відступів у body */
+    height: 100vh; /* Висота тіла сторінки дорівнює висоті вікна браузера */
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    background-image: url(IMG/background.png);
+    background-size: 100vw 100vh; /* Add this line */
+    background-repeat: no-repeat; /* Add this line to prevent repeating */
+    backdrop-filter: blur(25px);
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    place-items: center; /* Центрування вмісту контейнера */
+    height: 450px;
+    width: 400px;
+    background-color: transparent;
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 35px;
+  }
+
+.row {
+    padding: 10px 25px 25px 25px;
+    height: auto;
+    border: 1px solid #cfcfcf;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    background-color: white;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#login {
+  text-indent: 30px;
+  height: 20px;
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, hsla(0, 0%, 79%, 0.503), rgba(118, 118, 118, 0));
+  transition: 1s;
+}
+
+#login::placeholder{
+  font-size: 10px;
+  padding-left: 3%;
+  color: black;
+  text-indent: 20px;
+  opacity: 75%;
+}
+
+#login:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#login:focus {
+  outline: none;
+  border-color: white;
+}
+
+#Mail {
+  height: 20px;
+}
+
+#Mail::placeholder{
+  font-size: 10px;
+  padding-left: 3%;
+}
+
+#password {
+  text-indent: 30px;
+  height: 20px;
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, hsla(0, 0%, 79%, 0.503), rgba(118, 118, 118, 0));
+  transition: 1s;
+}
+
+#password:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#password::placeholder{
+  text-indent: 20px;
+  font-size: 10px;
+  padding-left: 3%;
+  color: black;
+  opacity: 75%;
+}
+
+#password:focus {
+  outline: none;
+  border-color: white;
+}
+
+#passwordSubmit {
+  height: 20px;
+}
+
+#passwordSubmit::placeholder{
+  font-size: 10px;
+  padding-left: 3%;
+}
+
+#submit {
+  cursor: pointer;
+  background-color: #0095F6;
+  height: 25px;
+  margin-top: 25px;
+  width: 200px;
+  margin-left: 21.5%;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+  background: linear-gradient(135deg, rgb(65, 87, 255), rgba(78, 175, 227, 0.91));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 0px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: 1s;
+}
+
+#submit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#submit:hover {
+  background-color: #3d91ff;
+}
+
+#Register {
+  font-size: small;
+  font-weight: 700;
+  color: #2e89ff;
+  cursor: pointer;
+  border: transparent;
+  background-color: transparent;
+}
+
+.logo {
+  margin: auto;
+  width: 70%;
+  transition: 2s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.line {
+  position: relative;
+  text-align: center;
+}
+.line:after {
+  content: "";
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+}
+.line span {
+  padding: 0 8px;
+  background-color: transparent;
+  position: relative;
+}
+
+.row {
+  animation: 2s show ease;
+}
+
+@keyframes show {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.underText {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  margin-top: 13.5%;
+  margin-left: 17%;
+  margin-right: 17%;
+  font-size: small;
+  display: grid;
+}
+
+#textRegister {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.underText {
+  animation: 2s show ease;
+}

@@ -1,0 +1,318 @@
+body {
+    margin: 0; /* Відсутність зовнішніх відступів у body */
+    height: 100vh; /* Висота тіла сторінки дорівнює висоті вікна браузера */
+    background-image: url(IMG/background.png);
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    background-size: 100vw 100vh; /* Add this line */
+    background-repeat: no-repeat; /* Add this line to prevent repeating */
+    backdrop-filter: blur(25px);
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    place-items: center; /* Центрування вмісту контейнера */
+    height: 450px;
+    width: 400px;
+    background-color: transparent;
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 35px;
+  }
+
+.row {
+    padding: 10px 25px 25px 25px;
+    height: auto;
+    border: 1px solid #cfcfcf;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; 
+    gap: 15px;
+    background-color: white;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#login {
+  text-indent: 30px;
+  height: 20px;
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, hsla(0, 0%, 79%, 0.503), rgba(118, 118, 118, 0));
+  transition: 1s;
+}
+
+#login::placeholder{
+  font-size: 10px;
+  padding-left: 3%;
+  color: black;
+  text-indent: 20px;
+  opacity: 75%;
+}
+
+#login:focus {
+  outline: none;
+  border-color: white;
+}
+
+#login:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#Mail {
+  height: 20px;
+}
+
+#Mail::placeholder{
+  font-size: 10px;
+  padding-left: 3%;
+}
+
+#password {
+  text-indent: 30px;
+  height: 20px;
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, hsla(0, 0%, 79%, 0.503), rgba(118, 118, 118, 0));
+  transition: 1s;
+}
+
+#password::placeholder{
+  text-indent: 20px;
+  font-size: 10px;
+  padding-left: 3%;
+  color: black;
+  opacity: 75%;
+}
+
+#password:focus {
+  outline: none;
+  border-color: white;
+}
+
+#password:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#passwordSubmit {
+  height: 20px;
+}
+
+#passwordSubmit::placeholder{
+  font-size: 10px;
+  padding-left: 3%;
+}
+
+#submit {
+  cursor: pointer;
+  background-color: #0095F6;
+  height: 25px;
+  width: 200px;
+  margin-left: 21.5%;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+  background: linear-gradient(135deg, rgb(65, 87, 255), rgba(78, 175, 227, 0.91));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 0px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: 1s;
+}
+
+#submit:hover {
+  background-color: #3d91ff;
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+
+.or {
+  font-size: 15px;
+  margin: 0 auto; /* Set left and right margins to 0 and auto */
+  width: 50%; /* Set a fixed width for the element */
+  text-align: center;
+}
+
+#btnfacebook {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #0095F6;
+  height: 20px;
+  width: 175px;
+  margin-left: 25%;
+  color: white;
+  font-size: x-small;
+  font-weight: bold;
+  background: linear-gradient(135deg, rgb(65, 87, 255), rgba(78, 175, 227, 0.91));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 0px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: 1s;
+}
+
+#btnfacebook:hover {
+  background-color: #3d91ff;
+  transform: scale(1.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+#btnpass {
+  cursor: pointer;
+  margin-left: 38.5%;
+  padding: 5px 5px 5px 5px;
+  border: solid;
+  border-radius: 10px;
+  background-color: transparent;
+  border: transparent;
+  font-size: 10px;
+  color: white;
+  transition: 1s;
+}
+
+#btnpass:hover {
+  transform: scale(1.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* #btnpass:hover {
+  cursor: pointer;
+} */
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  padding: 10px 15px 10px 15px;
+  height: auto;
+  border: 1px solid #cfcfcf;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: 1s;
+}
+
+.row2:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#text2 {
+  color: white;
+  font-size: medium;
+  font-weight: normal;
+  flex-direction: row;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#Register {
+  font-size: small;
+  font-weight: 700;
+  color: #000000cf;
+  cursor: pointer;
+  border: transparent;
+  background-color: transparent;
+}
+
+
+.logo {
+  margin: auto;
+  width: 70%;
+  transition: 2s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.UnderObj {
+  font-weight: 100;
+  font-size: smaller;
+  height: auto;
+  flex-direction: row; 
+}
+
+.appgoogle {
+  cursor: pointer;
+  display: flex; /* Add this line to make it a flex container */
+  justify-content: center; /* Add this line to center horizontally */
+  align-items: center; 
+  transition: 1s;
+  margin-top: -20px;
+}
+
+.appgoogle:hover {
+  transform: scale(1.1);
+}
+
+.photo {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex; /* Add this line to make it a flex container */
+  justify-content: center; /* Add this line to center horizontally */
+  align-items: center; /* Add this line to center vertically */
+  opacity: 80%;
+}
+
+.line {
+  position: relative;
+  text-align: center;
+}
+.line:after {
+  content: "";
+  border-bottom: 1px solid white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+}
+.line span {
+  padding: 0 8px;
+  background-color: transparent;
+  position: relative;
+}
+
+.footer {
+  color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  background-color: transparent;
+  margin-top: 195%;
+  flex: auto;
+  width: 250%;
+  text-align:center;
+  background-color: transparent;
+  font-size: small;
+}
+
+#textFooter {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-weight: lighter;
+}

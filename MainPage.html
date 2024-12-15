@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MainPage</title>
+    <link rel="stylesheet" type="text/css" href="Main.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="StoriesBlock">
+        <div class="UserStoriesContainer">
+          <div class="linked-element" id="userStories"></div>
+          <div class="linked-element" id="userStoriesChild"></div>
+        </div>
+
+        <div id="noneUser"></div>
+        <div id="noneUser"></div>
+      </div>
+
+      <button id="menuButton">☰</button>
+      <!-- Кнопка для відкриття меню -->
+    </header>
+
+    <div id="sideMenu">
+      <!-- Меню тепер поза header -->
+      <ul>
+        <li><a href="Profile.html">Мій Профіль</a></li>
+        <li><a href="#">Повідомлення</a></li>
+        <li><a href="#">Пошук</a></li>
+        <li><a href="#">Налаштування</a></li>
+      </ul>
+    </div>
+
+    <main>
+      <section class="post">
+        <div class="linked-element" id="postUserIcon"></div>
+        <span id="userNamePost">UserName</span>
+
+        <section class="postBlock">
+          <div id="userPostBlock"><img id="userPostPhoto" src="IMG/PostPhoto.jpg" /></div>
+
+          <div class="useBar">
+            <div class="actionButtons">
+              <button id="likeButton">
+                <img id="likePng" src="IMG/like.png" alt="Like" />
+              </button>
+              <button id="commentButton">
+                <img id="commentPng" src="IMG/comment.png" alt="Comment" />
+              </button>
+              <button id="shareButton">
+                <img id="sharePng" src="IMG/share.png" alt="Share" />
+              </button>
+              <button id="saveButton">
+                <img id="savePng" src="IMG/SaveButton.png" alt="Save" />
+              </button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="JS/main.js"></script>
+  </body>
+</html>
