@@ -13,15 +13,51 @@
     <footer>
       <section class="upperBlock">
         <div class="linked-element" id="userStories"></div>
-        <div>Posts</div>
-        <div>Subscribers</div>
-        <div>Watching</div>
-        <div>Edit Profile</div>
-        <div>Share Profile</div>
+
+        <section class="userInformation">
+          <div>
+            Posts
+            <p id="userNumberInfo">123</p>
+          </div>
+          <div>
+            Subscribers
+            <p id="userNumberInfo">123</p>
+          </div>
+          <div>
+            Watching
+            <p id="userNumberInfo">123</p>
+          </div>
+          <button type="button" id="profileButton">Edit Profile</button>
+          <button type="button" id="profileButton">Share Profile</button>
+        </section>
       </section>
+      <button id="menuButton">☰</button>
+      <div id="sideMenu">
+        <!-- Меню тепер поза header -->
+        <ul id="menuText">
+          <li><a href="MainPage.html">Основна сторінка</a></li>
+          <li><a href="#">Повідомлення</a></li>
+          <li><a href="#">Пошук</a></li>
+          <li><a href="#">Налаштування</a></li>
+          <li><a href="login.html">Вийти</a></li>
+        </ul>
+      </div>
     </footer>
 
-    <main></main>
-    <script src="index.js"></script>
+    <main>
+      <div class="postSection">
+        <div class="photo-grid" id="postContainer"></div>
+      </div>
+    </main>
+
+    <div id="modal">
+      <div id="modalContent">
+        <button id="closeModal">×</button>
+        <img id="modalImage" src="" alt="Модальне зображення" />
+        <p id="modalCaption"></p>
+      </div>
+    </div>
+
+    <script src="JS/Profile.js"></script>
   </body>
 </html>

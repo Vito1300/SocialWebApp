@@ -57,7 +57,7 @@ header {
 #userStories {
   width: 80px;
   height: 80px;
-  background-image: url(https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5iqy7AzrG-dXXWp76jDB7n7Bsz98MlkOqDg&s);
   background-size: contain;
   border-radius: 100%;
   text-align: center;
@@ -164,7 +164,7 @@ header {
   top: 0;
   right: -250px; /* Початкове положення поза екраном */
   width: 250px;
-  height: 300px;
+  height: 350px;
   transition: right 0.3s ease, box-shadow 0.3s ease;
   padding: 20px;
   z-index: 1000; /* Забезпечує, що меню буде поверх усього іншого */
@@ -247,7 +247,7 @@ header {
   margin-top: 20px;
   width: 80px;
   height: 80px;
-  background-image: url(https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5iqy7AzrG-dXXWp76jDB7n7Bsz98MlkOqDg&s);
   background-size: contain;
   border-radius: 100%;
   text-align: center;

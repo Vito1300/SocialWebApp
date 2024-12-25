@@ -1,15 +1,12 @@
 * {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
   user-select: none;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: transparent;
-  width: 100vw;
   height: 100vh;
   position: relative;
   background-image: url(IMG/background.png); /* Фонове зображення */
@@ -17,11 +14,16 @@ body {
   background-position: center;
 }
 
+footer {
+  position: relative;
+}
+
 #userStories {
+  margin-left: 35px;
   align-self: center;
   width: 80px;
   height: 80px;
-  background-image: url(https://cs14.pikabu.ru/post_img/big/2023/02/13/8/1676296367166243426.png);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5iqy7AzrG-dXXWp76jDB7n7Bsz98MlkOqDg&s);
   background-size: contain;
   border-radius: 100%;
   text-align: center;
@@ -31,7 +33,6 @@ body {
   border-spacing: 1px;
   display: inline-flex;
   place-content: center;
-  margin-left: 15px;
   transition: 1s;
 }
 
@@ -46,6 +47,8 @@ body {
 }
 
 .upperBlock {
+  max-width: fit-content;
+  gap: 25px;
   display: flex;
   width: 50%;
   height: 100px;
@@ -56,4 +59,210 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.userInformation {
+  align-items: center;
+  margin: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  align-self: center;
+  display: flex;
+  gap: 5%;
+  color: white;
+  text-align: cneter;
+  background-color: rgb(52, 176, 207);
+  width: 500px;
+  height: 55%;
+  border-radius: 10px 10px 10px 10px;
+  background: linear-gradient(135deg, rgba(91, 122, 169, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+#userNumberInfo {
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+#sideMenu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Початкове положення поза екраном */
+  width: 250px;
+  height: 300px;
+  transition: right 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  z-index: 1000; /* Забезпечує, що меню буде поверх усього іншого */
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 0px 0 rgba(0, 0, 0, 0.7);
+  gap: 15px;
+  overflow: hidden; /* Прибирає нижній слайдбар */
+  border-bottom-left-radius: 25px;
+}
+
+/* Додаємо тінь лише коли меню відкрито */
+#sideMenu.open {
+  right: 0;
+  box-shadow: -4px 0px 15px rgba(0, 0, 0, 0.5); /* Тінь зліва */
+}
+
+#sideMenu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sideMenu li {
+  margin: 25px;
+  transition: 1s;
+}
+
+#sideMenu li:hover {
+  transform: scale(1.05);
+}
+
+#sideMenu a {
+  color: white;
+  text-decoration: none;
+}
+
+#sideMenu.open {
+  right: 0;
+}
+
+#menuButton {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+  transition: 1s;
+}
+
+#menuButton:hover {
+  transform: scale(1.05);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 525px;
+  margin: 0 auto;
+}
+
+.photo img {
+  border: #ffffff solid 1px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.photo img:hover {
+  transform: scale(1.01);
+}
+
+.postSection {
+  margin-top: 25px;
+  border: 2px white solid;
+  border-top: none;
+  border-bottom: none;
+  margin-left: 28%;
+  margin-right: 28%;
+  border-radius: 25px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding-top: 10px;
+}
+
+.photo p {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+#profileButton {
+  border-radius: 10px;
+  height: fit-content;
+  border: 2px white solid;
+  background: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  transition: 1s;
+  padding: 5px;
+}
+
+#profileButton:hover {
+  scale: 1.1;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#modalContent {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
+  max-height: 90%;
+  overflow: auto;
+}
+
+#modalImage {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+#modalCaption {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
 }
